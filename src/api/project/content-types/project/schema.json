@@ -37,6 +37,14 @@
       "relation": "oneToOne",
       "target": "api::blog.blog",
       "mappedBy": "project"
+    },
+    "status_color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "green",
+        "orange"
+      ]
     }
   }
 }

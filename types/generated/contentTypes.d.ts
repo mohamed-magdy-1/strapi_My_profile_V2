@@ -580,6 +580,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     old_date: Schema.Attribute.Date;
     projectImg: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
+    status_color: Schema.Attribute.Enumeration<['red', 'green', 'orange']>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
