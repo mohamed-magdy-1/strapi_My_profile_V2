@@ -382,7 +382,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     all_about: Schema.Attribute.DynamicZone<
-      ['field-about.about', 'field-about.images']
+      ['field-about.about', 'field-about.images', 'field-about.skills']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

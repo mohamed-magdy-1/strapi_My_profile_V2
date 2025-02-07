@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_field_about_skills",
+  "info": {
+    "displayName": "skills",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "mySkills": {
+      "type": "string"
+    },
+    "skill_icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

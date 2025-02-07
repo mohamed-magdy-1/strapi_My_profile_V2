@@ -16,7 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "field-about.about",
-        "field-about.images"
+        "field-about.images",
+        "field-about.skills"
       ]
     }
   }

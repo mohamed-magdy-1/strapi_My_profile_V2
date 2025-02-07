@@ -31,11 +31,24 @@ export interface FieldAboutImages extends Struct.ComponentSchema {
   };
 }
 
+export interface FieldAboutSkills extends Struct.ComponentSchema {
+  collectionName: 'components_field_about_skills';
+  info: {
+    displayName: 'skills';
+    icon: 'briefcase';
+  };
+  attributes: {
+    mySkills: Schema.Attribute.String;
+    skill_icon: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'field-about.about': FieldAboutAbout;
       'field-about.images': FieldAboutImages;
+      'field-about.skills': FieldAboutSkills;
     }
   }
 }
