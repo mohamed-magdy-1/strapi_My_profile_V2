@@ -4,24 +4,34 @@
   "info": {
     "singularName": "background-img",
     "pluralName": "background-imgs",
-    "displayName": "background_Img"
+    "displayName": "backgroundWep",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "backgroundImg": {
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "object_fit": {
+      "type": "boolean",
+      "default": false
+    },
+    "background_Img2": {
       "allowedTypes": [
         "images",
         "videos"
       ],
       "type": "media",
       "multiple": false
-    },
-    "object_fit": {
-      "type": "boolean",
-      "default": false
     }
   }
 }

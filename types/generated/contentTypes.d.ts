@@ -400,7 +400,8 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
 export interface ApiBackgroundImgBackgroundImg extends Struct.SingleTypeSchema {
   collectionName: 'background_imgs';
   info: {
-    displayName: 'background_Img';
+    description: '';
+    displayName: 'backgroundWep';
     pluralName: 'background-imgs';
     singularName: 'background-img';
   };
@@ -408,7 +409,8 @@ export interface ApiBackgroundImgBackgroundImg extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    backgroundImg: Schema.Attribute.Media<'images' | 'videos'>;
+    background: Schema.Attribute.Media<'images' | 'videos'>;
+    background_Img2: Schema.Attribute.Media<'images' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
