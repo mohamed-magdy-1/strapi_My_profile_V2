@@ -34,12 +34,13 @@ export interface FieldAboutImages extends Struct.ComponentSchema {
 export interface FieldAboutSkills extends Struct.ComponentSchema {
   collectionName: 'components_field_about_skills';
   info: {
+    description: '';
     displayName: 'skills';
     icon: 'briefcase';
   };
   attributes: {
-    mySkills: Schema.Attribute.String;
     skill_icon: Schema.Attribute.Media<'images' | 'files', true>;
+    title: Schema.Attribute.String;
   };
 }
 

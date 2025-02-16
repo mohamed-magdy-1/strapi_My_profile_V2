@@ -2,20 +2,22 @@
   "collectionName": "components_field_about_skills",
   "info": {
     "displayName": "skills",
-    "icon": "briefcase"
+    "icon": "briefcase",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "mySkills": {
+    "title": {
       "type": "string"
     },
     "skill_icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
