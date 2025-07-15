@@ -1,20 +1,23 @@
 'use strict';
 
 module.exports = {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    strapi.server.routes([
+      {
+        method: 'GET',
+        path: '/health',
+        handler: async (ctx) => {
+          const users = await strapi.entityService.findMany('plugin::users-permissions.user', {
+            limit: 1,
+          });
+          ctx.body = { status: 'ok', userCount: users.length };
+        },
+        config: {
+          auth: false,
+        },
+      },
+    ]);
+  },
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
   bootstrap(/*{ strapi }*/) {},
 };
