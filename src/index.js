@@ -2,6 +2,15 @@
 
 module.exports = {
   register({ strapi }) {
+    // إصلاح مشكلة secure cookie خلف reverse proxy
+    strapi.server.use(async (ctx, next) => {
+      if (ctx.req?.socket) {
+        ctx.req.socket.encrypted = true;
+      }
+      await next();
+    });
+
+    // الـ route الموجود مسبقاً
     strapi.server.routes([
       {
         method: 'GET',
